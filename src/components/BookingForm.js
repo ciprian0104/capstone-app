@@ -1,11 +1,11 @@
 import './../css/BookingForm.css';
 import React, { useState, useEffect } from 'react';
-import { fetchAPI, submitAPI } from './../api'; // Import the fetchAPI function from the API
+import { fetchAPI, submitAPI } from './../api';
 import { useNavigate } from 'react-router-dom';
 
 export const BookingForm = () => {
   const [availableTimes, setAvailableTimes] = useState([]);
-  const [date, setDate] = useState(new Date()); // Initialize date with today's date
+  const [date, setDate] = useState(new Date());
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState('1');
   const [occasion, setOccasion] = useState('birthday');
@@ -18,13 +18,12 @@ export const BookingForm = () => {
 
   const initializeTimes = () => {
     const today = new Date();
-    const availableTimesToday = fetchAPI(today); // Fetch available times for today
-    setTime(availableTimesToday[0]);
+    const availableTimesToday = fetchAPI(today);
     setAvailableTimes(availableTimesToday);
   };
 
   const updateTimes = (selectedDate) => {
-    const availableTimesForDate = fetchAPI(selectedDate); // Fetch available times for the selected date
+    const availableTimesForDate = fetchAPI(selectedDate);
     setAvailableTimes(availableTimesForDate);
   };
 
@@ -34,7 +33,6 @@ export const BookingForm = () => {
     const response = submitAPI({ date, time, guests, occasion });
     if (response) {
       navigate('/confirmed');
-      // alert("You have submitted successfully");
     } else {
       alert('Your submission failed because the form is invalid');
     }

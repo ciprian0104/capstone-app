@@ -1,11 +1,9 @@
-import React from 'react';
-import './../css/Header.css';
 import Nav from './Nav';
 
-const Header = () => {
+const Header = ({ isNavOpen, setIsNavOpen }) => {
   return (
-    <header>
-      <Nav />
+    <header className='fw'>
+      <Nav isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
     </header>
   );
 };

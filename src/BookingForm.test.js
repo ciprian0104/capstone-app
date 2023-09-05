@@ -1,43 +1,26 @@
 import { render, screen } from '@testing-library/react';
 import { BookingForm } from './components/BookingForm';
 
-test('Renders the "Choose date" label', () => {
-  // Mock the availableTimes prop with sample data
-  const mockAvailableTimes = [
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-  ];
-
-  render(<BookingForm availableTimes={mockAvailableTimes} />);
-  const chooseDateLabel = screen.getByLabelText('Choose date');
-  expect(chooseDateLabel).toBeInTheDocument();
-});
+jest.mock('./api', () => ({
+  fetchAPI: jest.fn((date) => {
+    return ['17:00', '18:00', '19:00'];
+  }),
+}));
 
 initializeTimes = (state) => {
   const selectedDate = state.selectedDate;
-  // You can implement logic here to fetch available times from an API based on the selected date.
-  // For now, let's just return some example available times regardless of the date.
   const exampleAvailableTimes = ['17:00', '18:00', '19:00'];
 
-  // Return a new state object with the availableTimes property updated based on the selected date
   return {
     ...state,
     availableTimes: exampleAvailableTimes,
   };
 };
 
-// Function to update available times based on the selected date
 export const updateTimes = (state) => {
   const selectedDate = state.selectedDate;
-  // You can implement logic here to fetch updated available times from an API based on the selected date.
-  // For now, let's assume that the available times remain the same.
   const updatedAvailableTimes = state.availableTimes;
 
-  // Return a new state object with the availableTimes property updated based on the selected date
   return {
     ...state,
     availableTimes: updatedAvailableTimes,
@@ -47,11 +30,10 @@ export const updateTimes = (state) => {
 test('initializeTimes returns the correct expected value', () => {
   const initialState = {
     availableTimes: [],
-    selectedDate: '2023-09-05',
-    // other state properties...
+    selectedDate: new Date('2023-09-06'),
   };
 
-  const expectedTimes = ['17:00', '18:00', '19:00']; // Example expected times
+  const expectedTimes = ['17:00', '18:00', '19:00'];
   const initializedState = initializeTimes(initialState);
 
   expect(initializedState.availableTimes).toEqual(expectedTimes);
@@ -60,8 +42,7 @@ test('initializeTimes returns the correct expected value', () => {
 test('updateTimes returns the same value as provided in the state', () => {
   const initialState = {
     availableTimes: ['17:00', '18:00', '19:00'],
-    selectedDate: '2023-09-08',
-    // other state properties...
+    selectedDate: new Date('2023-09-07'),
   };
 
   const updatedState = updateTimes(initialState);

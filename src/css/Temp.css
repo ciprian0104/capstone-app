@@ -46,7 +46,6 @@ h2 {
   }
 }
 
-/* Mobile Styles */
 @media (max-width: 767px) {
   .temp-w50 {
     width: 100%;

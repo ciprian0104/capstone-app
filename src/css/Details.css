@@ -1,4 +1,3 @@
-/* ABOUT */
 .about-us {
   margin: 15px 0px;
   background-color: #f4ce14;
@@ -25,7 +24,6 @@ h2 {
   color: #495e57;
 }
 
-/* desktop */
 @media screen and (min-width: 768px) {
   .hero-text {
     padding: 0 0 0 20px;
@@ -75,10 +73,9 @@ h2 {
   }
 }
 
-/* mobile */
 @media (max-width: 767px) {
   .about-us {
-    grid-template-columns: 1fr; /* Make it a vertical grid with one column */
+    grid-template-columns: 1fr;
     align-items: center;
     height: 600px;
   }

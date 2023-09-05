@@ -1,5 +1,10 @@
 import React from 'react';
+import './../css/Confirmation.css';
 
 export const Confirmation = () => {
-  return <p>Your booking has been confirmed!</p>;
+  return (
+    <div className='confirmed-w50'>
+      <h1>Your booking has been confirmed!</h1>
+    </div>
+  );
 };
