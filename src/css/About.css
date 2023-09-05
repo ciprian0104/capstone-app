@@ -75,7 +75,6 @@ h2 {
   }
 }
 
-/* desktop */
 @media (min-width: 768px) {
   .hero-text {
     padding: 0 0 0 20px;

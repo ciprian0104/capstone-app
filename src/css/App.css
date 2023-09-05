@@ -6,6 +6,17 @@
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .mb {
+    display: none;
+  }
+  s .content {
+    width: 50%;
+    min-width: 768px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 767px) {
   .mb {
     display: block;
@@ -13,16 +24,5 @@
 
   .content {
     width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .mb {
-    display: none;
-  }
-  .content {
-    width: 50%;
-    min-width: 768px;
-    margin: 0 auto;
   }
 }

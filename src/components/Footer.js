@@ -12,21 +12,21 @@ const Footer = () => {
     <footer className=' footer-ct'>
       <div className='footer-w50'>
         <div className='dp-flex'>
-          <div class='left-content'>
+          <div className='left-content'>
             <img
               className='footer-img'
               src={require('./../assets/logo-images/Asset 18@4x.png')}
               alt='footer-img'
             />
           </div>
-          <div class='center-content'>
+          <div className='center-content'>
             <div className='footer-info'>
               <p>
                 Contact Information:{' '}
                 <span className='footer-email'>littlelemon@gmail.com</span>
               </p>
               <p>Follow us on social media:</p>
-              <ul class='social-media-list'>
+              <ul className='social-media-list'>
                 <li className='social-li'>
                   <a
                     href='https://www.facebook.com'
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='right-content'>
-            <div class='footer-copy-right'>
+            <div className='footer-copy-right'>
               <p>© 2023 Little Lemon. All rights reserved.</p>
               <p>Privacy Policy | Terms of Service.</p>
             </div>

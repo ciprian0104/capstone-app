@@ -1,84 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Hero from '../Hero';
+import Highlights from '../Highlights';
 import './../../css/Home.css';
-import Card from '../Card';
-import Details from '../Details';
 
 export const HomePage = () => {
-  let dishes = [
-    {
-      title: 'Greek salad',
-      image: 'greek salad.jpg',
-      price: 12.99,
-      description: `The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.`,
-    },
-    {
-      title: 'Bruschetta',
-      image: 'bruchetta.jpg',
-      price: 5.99,
-      description: `Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.`,
-    },
-    {
-      title: 'Lemon Dessert',
-      image: 'lemon dessert.jpg',
-      price: 5.0,
-      description: `This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.`,
-    },
-  ];
-
   return (
-    <>
-      <div className='hero'>
-        <div className='hero-w50'>
-          <div className='hero-cp left'>
-            <div className='hero-disc'>
-              <h1>Little Lemon</h1>
-              <h2>Chicago</h2>
-              <p>
-                We are a family owned Mediterranean restaurant, focused on
-                traditional recipes served with a modern twist.
-              </p>
-              <Link to='/reservation'>
-                <button className='hero-btn'>Reserve a Table</button>
-              </Link>
-            </div>
-          </div>
-          <div className='hero-cp right'>
-            <img
-              className='hero-image'
-              src={require('./../../assets/restaurant-images/restauranfood.jpg')}
-              alt='Restaurant Food'
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className='hightlights-w50'>
-        <div className='highlight-header'>
-          <div className='hightlight-title'>
-            <h1>This weeks specials!</h1>
-          </div>
-          <div className='highlight-div-btn'>
-            <Link to='/menu'>
-              <button className='highlight-btn'>Online Menu</button>
-            </Link>
-          </div>
-        </div>
-        <div className='card-container'>
-          {dishes.map((dish, index) => (
-            <Card
-              key={index}
-              image={dish.image}
-              title={dish.title}
-              price={dish.price.toFixed(2)}
-              description={dish.description}
-            />
-          ))}
-        </div>
-        <div>
-          <Details />
-        </div>
-      </div>
-    </>
+    <div className='fh'>
+      <Hero />
+      <Highlights />
+    </div>
   );
 };

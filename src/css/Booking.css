@@ -5,7 +5,6 @@
   font-size: 40px;
   padding: 0 5%;
 }
-/* Mobile Styles */
 @media (max-width: 767px) {
   .reservation-w50 {
     width: 100%;
@@ -20,7 +19,6 @@
   }
 }
 
-/* Desktop Styles */
 @media (min-width: 768px) {
   .reservation-w50 {
     width: 50%;

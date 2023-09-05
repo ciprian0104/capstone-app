@@ -4,7 +4,6 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 18px;
   margin: 0;
-  padding: 0;
 }
 *::before *::after {
   box-sizing: inherit;

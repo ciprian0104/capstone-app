@@ -31,14 +31,12 @@ select {
   color: #495e57;
 }
 
-/* Desktop Styles */
 @media (min-width: 768px) {
   .booking-btn {
     font-size: 18px;
   }
 }
 
-/* Mobile Styles */
 @media (max-width: 767px) {
   .booking-btn {
     font-size: 2.5vw;

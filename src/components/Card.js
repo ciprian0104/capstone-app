@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
-import './../css/Card.css'; // Import the CSS file for styling
+import './../css/Card.css';
 import { Link } from 'react-router-dom';
 
 const Card = ({ image, title, price, description }) => {
