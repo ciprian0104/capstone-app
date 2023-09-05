@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-export const Booking = () => {
+export const BookingPage = () => {
   const [date, setDate] = useState(new Date());
 
   return (

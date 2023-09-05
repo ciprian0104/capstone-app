@@ -4,7 +4,7 @@ import './../../css/Home.css';
 import Card from '../Card';
 import Details from '../Details';
 
-export const Home = () => {
+export const HomePage = () => {
   let dishes = [
     {
       title: 'Greek salad',

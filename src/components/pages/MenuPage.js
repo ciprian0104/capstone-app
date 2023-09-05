@@ -1,9 +1,10 @@
 import React from 'react';
 import Temp from '../Temp';
-export const Order = () => {
+
+export const MenuPage = () => {
   return (
     <>
-      <Temp title={'Order page'} />
+      <Temp title={'Menu page'} />
     </>
   );
 };
