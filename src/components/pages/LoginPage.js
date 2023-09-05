@@ -1,6 +1,6 @@
 import Temp from '../Temp';
 
-export const Login = () => {
+export const LoginPage = () => {
   return (
     <>
       <Temp title={'Login page'} />

@@ -2,7 +2,7 @@ import './../../css/About.css';
 
 import React from 'react';
 
-export const About = () => {
+export const AboutPage = () => {
   return (
     <article className='about-us'>
       <section className='hero-text'>
