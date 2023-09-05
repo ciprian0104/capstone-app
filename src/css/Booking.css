@@ -1,53 +1,31 @@
-.submit-form {
-  display: grid;
-  gap: 15px;
-  padding: 5%;
+.welcome-header {
+  color: #f4ce14;
+  font-family: 'Markazi Text', serif;
+  line-height: 0;
+  font-size: 40px;
+  padding: 0 5%;
 }
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .reservation-w50 {
+    width: 100%;
+    padding: 40px 0 0 0;
+  }
 
-.submit-form > label,
-input,
-select {
-  font-family: 'Karla', sans-serif;
-  font-size: 18px;
-}
-
-.submit-form > input,
-select {
-  width: 90%;
-}
-
-.booking-btn {
-  background-color: #f4ce14;
-  border-radius: 15px;
-  border: none;
-  padding: 2% 4% 2% 4%;
-  font-weight: bold;
-  font-family: 'Karla', sans-serif;
-  width: 30%;
-}
-
-.booking-btn:hover {
-  background-color: #edefee;
-  color: #495e57;
+  .welcome-header {
+    color: #f4ce14;
+    font-family: 'Markazi Text', serif;
+    line-height: 0;
+    font-size: 4vw;
+  }
 }
 
 /* Desktop Styles */
 @media (min-width: 768px) {
-  .booking-btn {
-    font-size: 18px;
-  }
-}
-
-/* Mobile Styles */
-@media (max-width: 767px) {
-  .booking-btn {
-    font-size: 2.5vw;
-  }
-
-  .submit-form > label,
-  input,
-  select {
-    font-family: 'Karla', sans-serif;
-    font-size: 2vw;
+  .reservation-w50 {
+    width: 50%;
+    min-width: 768px;
+    margin: 0px auto;
+    padding: 40px 0 0 0;
   }
 }
